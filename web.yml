@@ -1,0 +1,13 @@
+---
+- name: Configure WebServers
+  hosts: Azure
+  become: True
+  tasks:
+    - name: Install Nginx
+      apt: name=nginx
+    - name: Copy config file Nginx
+      copy: src=/Jenkins/nginx.conf dest=/etc/nginx
+    - name: Copy site index.html
+      copy: src=/Jenkins/index.html dest=/var/www/html
+    - name: restart Nginx
+      service: name=nginx state=restarted
