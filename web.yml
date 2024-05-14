@@ -1,6 +1,6 @@
 ---
 - name: Configure WebServers
-  hosts: 20.215.40.5, 20.215.33.122
+  hosts: Azure
   become: True
   tasks:
     - name: Install Nginx
