@@ -1,2 +1,2 @@
-FROM nginx:latest
-copy /Jenkins/index.html /usr/share/nginx/html/index.html
+FROM nginx:
+copy ./index.html /usr/share/nginx/html/index.html
