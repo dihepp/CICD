@@ -4,7 +4,7 @@
   gather_facts: false
   become: True
   vars:
-    build: $BUILD_NUMBER
+    build: $16
     
 
   tasks:
@@ -22,7 +22,7 @@
       
 
     - name: Pull Docker image
-      command: docker pull nickabr/CICD:v{{ build }}
+      command: docker pull nickabr/CICD:{{ build }}
 
     - name: Run Docker image
-      command: docker run -d -p 80:8080 nickabr/CICD:v{{ build }}
+      command: docker run -d -p 80:8080 nickabr/CICD:{{ build }}
