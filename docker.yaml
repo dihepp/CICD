@@ -7,11 +7,11 @@
     
 
   tasks:
-    - name: Update apt and install docker
-      apt:
-        name: docker
-        state: latest
-        update_cache: true
+#    - name: Update apt and install docker
+#      apt:
+#        name: docker
+#        state: latest
+#        update_cache: true
         
     - name: Delete running containers
       shell: docker rm -f $(docker ps --all --quiet)
