@@ -21,8 +21,8 @@
 #      shell: docker rmi -f $(docker images --all --quiet)    
       
 
-#    - name: Pull Docker image
-#      command: docker pull nickabr/v1:{{ build }}
+    - name: Pull Docker image
+      command: docker pull nickabr/v1:{{ build }}
 
-#    - name: Run Docker image
-#      command: docker run -d -p 8080:80 nickabr/v1:{{ build }}
+    - name: Run Docker image
+      command: docker run -d -p 8080:80 nickabr/v1:{{ build }}
