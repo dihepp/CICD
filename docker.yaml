@@ -4,7 +4,7 @@
   gather_facts: false
   become: True
   vars:
-    build: $BUILD_NUMBER 
+    build: 66
     
 
   tasks:
