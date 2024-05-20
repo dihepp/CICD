@@ -4,7 +4,7 @@
   gather_facts: false
   become: True
   vars:
-    build: v1
+    build: 2
     
 
   tasks:
@@ -22,7 +22,7 @@
       
 
     - name: Pull Docker image
-      command: docker pull nickabr/nicknew:{{ build }}
+      command: docker pull nickabr/v1:{{ build }}
 
     - name: Run Docker image
-      command: docker run -d -p 8080:80 nickabr/nicknew:{{ build }}
+      command: docker run -d -p 8080:80 nickabr/v1:{{ build }}
