@@ -22,7 +22,7 @@
       
 
     - name: Pull Docker image
-      command: docker pull nickabr/v1:{{ build }}
+      command: docker pull nickabr/nicknew:{{ build }}
 
     - name: Run Docker image
-      command: docker run -d -p 8080:80 nickabr/v1:{{ build }}
+      command: docker run -d -p 8080:80 nickabr/nicknew:{{ build }}
