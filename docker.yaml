@@ -4,7 +4,7 @@
   gather_facts: false
   become: True
   vars:
-    build: 100
+    build: 20
     
 
   tasks:
@@ -14,15 +14,15 @@
 #        state: latest
 #        update_cache: true
         
-#    - name: Delete running containers
-#      shell: docker rm -f $(docker ps --all --quiet)
+    - name: Delete running containers
+      shell: docker rm -f $(docker ps --all --quiet)
       
-#    - name: Delete all Docker Images
-#      shell: docker rmi -f $(docker images --all --quiet)    
+    - name: Delete all Docker Images
+      shell: docker rmi -f $(docker images --all --quiet)    
       
 
     - name: Pull Docker image
-      command: docker pull nickabr/nicknew:{{ build }}
+      command: docker pull nickabr/v1:{{ build }}
 
     - name: Run Docker image
-      command: docker run -d -p 8080:80 nickabr/nicknew:{{ build }}
+      command: docker run -d -p 8080:80 nickabr/v1:{{ build }}
