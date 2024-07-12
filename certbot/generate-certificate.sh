@@ -2,7 +2,7 @@
 
 rm -rf /etc/letsencrypt/live/certfolder*
 
-certbot certonly --standalone --email $DOMAIN_EMAIL -d $DOMAIN_URL --cert-name=certfolder --key-type rsa --agree-tos --force-interactive
+certbot certonly --standalone --email $DOMAIN_EMAIL -d $DOMAIN_URL --cert-name=certfolder --key-type rsa --agree-tos --force-interactive --no-eff-email
 
 rm -rf /Jenkins/cert.pem
 rm -rf /Jenkins/key.pem
