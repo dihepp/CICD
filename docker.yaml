@@ -4,8 +4,7 @@
   gather_facts: false
   become: True
   vars:
-    build: $BUILD_NUMBER
-    
+    build: 20
 
   tasks:
 #    - name: Update apt and install docker
