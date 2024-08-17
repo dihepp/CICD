@@ -1,6 +1,6 @@
 ---
 - name: Configure WebServers
-  hosts: 20.224.56.241
+  hosts: 20.68.128.95
   become: True
   tasks:
     - name: Install Nginx
