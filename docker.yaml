@@ -1,6 +1,6 @@
 ---
 - name: Configure WebServers with Docker
-  hosts: 20.224.56.241
+  hosts: 20.68.128.95
   gather_facts: false
   become: True
   vars:
