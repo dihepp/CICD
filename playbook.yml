@@ -1,5 +1,5 @@
 ---
-- hosts: 20.86.132.119
+- hosts: Azure
   become: true
   vars:
     container_count: 4
