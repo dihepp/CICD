@@ -1,6 +1,6 @@
 ---
 - name: Configure WebServers with Docker
-  hosts: 20.86.132.119
+  hosts: Azure
   gather_facts: false
   become: True
   vars:
